@@ -32,8 +32,8 @@ function LoginPage() {
           className="absolute inset-0 w-full h-full object-cover "
         />
         <div className="relative  z-10 flex flex-col justify-center items-center text-black  font-bold  w-full ">
-          <h1 className="text-7xl font-bold mb-4 shadow-2xl shadow-black ">Welcome Back</h1>
-          <p className="text-2xl max-w-md text-center text-bold text-white ">
+          <h1 className="text-5xl font-bold mb-4 shadow-2xl shadow-black ">Welcome Back</h1>
+          <p className="text-xl max-w-md text-center text-bold text-white ">
             Log in to access your account and continue your journey with us.
           </p>
         </div>
