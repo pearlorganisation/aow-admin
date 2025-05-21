@@ -1,6 +1,5 @@
 import React from 'react';
 import VehicleTable from '../../Components/vehicles/vehicleTable';
-import { VehicleData } from '../../Components/Data/Vehicle';
 const UnApprovedVehicle = () => {
   const data = [
     { id: 1, name: 'John Doe', email: 'john@example.com', status: 'Not Approved', image: '/bike.png' },
