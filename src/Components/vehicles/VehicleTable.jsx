@@ -65,11 +65,7 @@ const VehicleTable = ({ VehicleData }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImageUrl, setSelectedImageUrl] = useState('');
     const [selectedImageAlt, setSelectedImageAlt] = useState('');
-    
-    const hanldeDelete = (id)=>{
-       VehicleData =  VehicleData.filter(VehicleData.id !=id )
 
-    }
 
     const handleImageClick = (imageUrl, altText) => {
         setSelectedImageUrl(imageUrl);
@@ -120,7 +116,7 @@ const VehicleTable = ({ VehicleData }) => {
                                     <button className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition-colors duration-150 ease-in-out">
                                         Reject
                                     </button>
-                                    <button onClick={ ()=>hanldeDelete(vehicle.id)} className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600 transition-colors duration-150 ease-in-out">
+                                    <button  className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600 transition-colors duration-150 ease-in-out">
                                         Delete
                                     </button>
                                 </td>
