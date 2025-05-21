@@ -204,7 +204,7 @@ const Sidebar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
     // The sidebar is <aside className="... bg-gray-800 ...">
     // Ensure this outer div is not causing layout issues or covering the sidebar.
     // For simplicity, assuming it's part of a larger page layout.
-    <div className='h-screen '> {/* Removed bg-green-700 if it's not intended for the direct parent of aside */}
+    <div className='h-screen fixed '> {/* Removed bg-green-700 if it's not intended for the direct parent of aside */}
       {isMobileSidebarOpen && (
         <div
           className="fixed inset-0 z-30 bg-black/60 lg:hidden"

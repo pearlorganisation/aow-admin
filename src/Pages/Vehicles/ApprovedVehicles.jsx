@@ -28,7 +28,7 @@ const ApprovedVehicles = () => {
         {/* Header */}
         <div className=" rounded-lg shadow-sm p-6 mb-6 flex flex-col justify-center items-center bg-[#e7fde5] w-full">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between">
-            <div className=''>
+            <div className=' text-center'>
               <h1 className="text-2xl font-bold text-gray-900">Approved Vehicle Listing</h1>
               <p className="mt-1 text-gray-500">Manage all vehicles approved by the admin</p>
             </div>
