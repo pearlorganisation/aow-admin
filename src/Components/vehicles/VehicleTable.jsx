@@ -108,15 +108,17 @@ const VehicleTable = ({ VehicleData }) => {
                                         onClick={() => handleImageClick(vehicle.image || '/bike.png', vehicle.name || 'Vehicle Image')}
                                     />
                                 </td>
-                                <td className="px-6 py-4 text-red-500">{vehicle.status}</td>
+                                <td className={` px-6 py-4  ${vehicle.status.trim() === "Approved" ? "text-green-400" : "text-red-700"}`}>{vehicle.status}</td>
                                 <td className="px-6 py-4 space-x-2 whitespace-nowrap">
-                                    <button className="bg-green-500  text-white px-3 py-1 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out">
-                                        Approve
-                                    </button>
+                                    {
+                                        !(vehicle.status === "Approved") && <button className="bg-green-500  text-white px-3 py-1 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out">
+                                            Approve
+                                        </button>
+                                    }
                                     <button className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition-colors duration-150 ease-in-out">
                                         Reject
                                     </button>
-                                    <button  className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600 transition-colors duration-150 ease-in-out">
+                                    <button className="bg-gray-500 text-white px-3 py-1 rounded hover:bg-gray-600 transition-colors duration-150 ease-in-out">
                                         Delete
                                     </button>
                                 </td>
