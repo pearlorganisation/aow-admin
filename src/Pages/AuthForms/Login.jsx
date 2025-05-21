@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
-
+import { useNavigate  } from 'react-router-dom';
 function LoginPage() {
+  const navigate = useNavigate ()
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    rememberMe: false
   });
-
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value
-    });
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Login form submitted with:', formData);
+    if (formData.email === "moto@gmail.com" && formData.password === "moto123456") {    
+      localStorage.setItem("login", "true");
+      navigate("/")
+
+    }    
     // Here you would typically handle authentication
   };
 
